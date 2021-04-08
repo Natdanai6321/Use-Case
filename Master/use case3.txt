@@ -1,0 +1,21 @@
+@startuml
+actor : User : as stu 
+
+(Vote off) as UC1 
+(Confirm identity) as UC2 
+(Set a vote) as UC3 
+(Secret group topic) as UC4
+(Timer) as UC5
+(Confirm PIN) as UC6
+
+UC1 --|> UC2 : <<uses >>
+UC3 --|> UC2 : <<uses >>
+UC4 --|> UC3 : <<uses >>
+UC5 --|> UC1 : <<uses >>
+UC6 --|> UC2 : <<uses >>
+
+stu --> UC1
+stu --> UC2
+stu --> UC3
+stu --> UC4
+@enduml

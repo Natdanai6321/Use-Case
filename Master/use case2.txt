@@ -1,0 +1,20 @@
+@startuml
+actor : Tenant : as stu 
+actor : Staff : as emp 
+
+
+(Payment) as UC1 
+(Check room information) as UC2 
+(Cost calculation) as UC3 
+(Calculation fines) as UC4
+
+
+UC1 --|> UC2 : <<uses >>
+UC1 --|> UC3 : <<uses >>
+UC4 --|> UC3 : <<uses >>
+
+stu --> UC1
+emp --> UC2
+emp --> UC3
+emp --> UC1
+@enduml
